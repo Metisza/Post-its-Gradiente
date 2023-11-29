@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: rgb(94, 32, 32);
+    --card-color: white;
+}
+
+body {
+    font-family: sans-Serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    gap: 2em;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+h1 {
+    font-size: 3.5em;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.7rem;
+    margin-bottom: 0.8em;
+}
+
+div {
+    width: 400px;
+    display: block;
+    padding: 3.0em;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    flex-grow: 1;
+    flex-basis: clamp(30em, calc(33%-25px), 40em);
+}
+
+.post-its {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8em;
+    background-color: var(--primary-color);
+}
+
+.l1 {
+    background-image: linear-gradient(135deg, transparent 25px, var(--card-color) 25px);
+    filter: drop-shadow(10px 7px 1px rgba(0, 0, 0, .2))
+}
+
+.l2 {
+    background-image: linear-gradient(135deg, transparent 25px, rgb(231, 231, 222) 25px), linear-gradient(135deg, transparent 25px, white 25px);
+    background-size: 36px 36px, 100%;
+    background-repeat: no-repeat;
+    filter: drop-shadow(10px 7px 1px rgba(0, 0, 0, .2))
+}
+
+.l3 {
+    background-image: linear-gradient(135deg, transparent 25px, var(--card-color) 25px);
+    filter: drop-shadow(10px 7px 1px rgba(0, 0, 0, .2))
+}
+
+.l3::before {
+    content: "";
+    display: block;
+    width: 2.25em;
+    height: 2.25em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(135deg, transparent 25px, rgb(231, 231, 222) 25px);
+    filter: drop-shadow(2px 2px 3px rgb(0,0,0,.3));
+}
